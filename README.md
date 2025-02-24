@@ -34,6 +34,7 @@
       ✅ <b>System tray integration</b> - runs quietly in the background</br>
 ✅ <b>Secure credential storage</b> using system keyring</br>
       ✅ <b>Cross-platform compatibility</b> (Windows & Linux)</br>
+      ✅ <b>Multiple browser support</b> (Chrome/Chromium and Firefox)</br>
       ✅ <b>Standalone executables</b> available for both Windows and Linux</br>
       ✅ <b>Smart meeting detection</b> from URLs & calendar data</br>
 
@@ -122,7 +123,7 @@ python main.py
     <td>
       <ul>
         <li>Windows 10/11 or Linux</li>
-        <li>Chrome/Chromium browser</li>
+        <li>Chrome/Chromium or Firefox browser</li>
         <li>Webcam (optional)</li>
         <li>Microphone</li>
         <li>Internet connection</li>
@@ -131,7 +132,7 @@ python main.py
     <td>
       <ul>
         <li>Python 3.8 or higher</li>
-        <li>Chrome/Chromium browser</li>
+        <li>Chrome/Chromium or Firefox browser</li>
         <li>PyQt6</li>
         <!-- <li>Webcam (optional)</li>
         <li>Microphone</li> -->
@@ -196,14 +197,14 @@ No. All your meeting data and credentials are stored locally on your machine. Cr
 
 - Verify your internet connection
 - Check that your credentials are correct
-- Ensure Chrome/Chromium is installed and updated
+- Ensure Chrome/Chromium or Firefox is installed and updated
 - Verify the meeting link/ID format is valid
 </details>
 
 <details>
 <summary><b>Application Won't Start</b></summary>
 
-- Verify Chrome/Chromium is installed
+- Verify Chrome/Chromium or Firefox is installed
 - Check for antivirus/firewall software blocking the application
 - Try running as administrator on Windows or with elevated privileges on Linux
 - Check log files in the application directory
