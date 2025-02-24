@@ -1,133 +1,217 @@
-# Meeting Automator
+# <img src="https://img.shields.io/badge/Meeting-Automator-1abc9c?style=for-the-badge&logo=zoom&logoColor=white" alt="Meeting Automator" height="40"> 
 
-A cross-platform GUI application that automatically joins your scheduled meetings on Zoom, Google Meet, and Microsoft Teams.
+<div align="center">
 
-## Features
+![License](https://img.shields.io/badge/license-MIT-green)
+![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+![PyQt](https://img.shields.io/badge/UI-PyQt6-41CD52)
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-- Dark mode GUI built with PyQt6
-- Automatic meeting joining for:
-  - Zoom
-  - Google Meet
-  - Microsoft Teams
-- Calendar import support (.ics files)
-- Secure credential storage
-- Background process for meeting monitoring
-- Cross-platform support (Windows and Linux)
-- System tray integration
-- Standalone executable available for Windows
+**Never miss a meeting again! Automatically join your scheduled video calls with ease.**
 
-## Installation
+[Features](#-features) • 
+[Screenshots](#-screenshots) • 
+[Installation](#-installation) • 
+[Usage](#-usage) • 
+[FAQ](#-faq) • 
+[Contributing](#-contributing) • 
+[License](#-license)
 
-### Method 1: Using the Executable (Windows)
+</div>
 
-1. Download the latest release from the releases page
+## 🚀 Features
+
+<table>
+  <tr>
+    <td>
+      <ul>
+        <li>✅ <b>Automatic meeting joining</b> for Zoom, Google Meet, and Microsoft Teams</li>
+        <li>✅ <b>Calendar import support</b> (.ics files)</li>
+        <li>✅ <b>Sleek dark mode UI</b> built with PyQt6</li>
+        <li>✅ <b>System tray integration</b> - runs quietly in the background</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>✅ <b>Secure credential storage</b> using system keyring</li>
+        <li>✅ <b>Cross-platform compatibility</b> (Windows & Linux)</li>
+        <li>✅ <b>Standalone executable</b> available for Windows</li>
+        <li>✅ <b>Smart meeting detection</b> from URLs & calendar data</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+## 📸 Screenshots
+
+*Screenshots coming soon*
+
+## 📥 Installation
+
+<details>
+<summary><b>Method 1: Download Executable (Windows) - Recommended ⭐</b></summary>
+
+1. Download the latest release from the [Releases](https://github.com/yourusername/meeting-automator/releases) page
 2. Extract the zip file
 3. Run `MeetingAutomator.exe`
+</details>
 
-### Method 2: Building from Source (Windows)
+<details>
+<summary><b>Method 2: Automated Build (Windows)</b></summary>
 
-1. Clone this repository:
 ```bash
+# 1. Clone the repository
 git clone https://github.com/yourusername/meeting-automator.git
 cd meeting-automator
-```
 
-2. Run the installation script:
-```bash
+# 2. Run the installation script
 install.bat
 ```
 
-The script will:
-- Check Python installation
-- Install all required dependencies
-- Build the executable
-- Clean up temporary files
-- Place the final executable in the `dist` folder
+The script handles:
+- Python dependency verification
+- Required package installation
+- Executable building
+- Cleanup of temporary files
 
-### Method 3: Manual Installation (Linux/macOS)
+The final executable will be placed in the `dist` folder.
+</details>
 
-1. Clone this repository:
+<details>
+<summary><b>Method 3: Manual Installation (Linux/macOS)</b></summary>
+
 ```bash
+# 1. Clone the repository
 git clone https://github.com/yourusername/meeting-automator.git
 cd meeting-automator
-```
 
-2. Create a virtual environment and install dependencies:
-```bash
+# 2. Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Linux/macOS
-pip install -r requirements.txt
-```
 
-3. Run the application:
-```bash
+# 3. Install dependencies
+pip install -r requirements.txt
+
+# 4. Run the application
 python main.py
 ```
+</details>
 
-## Usage
+## 🔧 System Requirements
 
-1. Start the application by either:
-   - Running the executable from the `dist` folder (Windows)
-   - Or running `python main.py` if installed manually
+<table>
+  <tr>
+    <th>For Executable</th>
+    <th>For Source Build</th>
+  </tr>
+  <tr>
+    <td>
+      <ul>
+        <li>Windows 10/11 or Linux</li>
+        <li>Chrome/Chromium browser</li>
+        <li>Webcam (optional)</li>
+        <li>Microphone</li>
+        <li>Internet connection</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Python 3.8 or higher</li>
+        <li>Chrome/Chromium browser</li>
+        <li>PyQt6</li>
+        <li>Webcam (optional)</li>
+        <li>Microphone</li>
+        <li>Internet connection</li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-2. Configure your meeting platform credentials:
-   - Go to the Settings tab
-   - Enter your credentials for each platform you use
-   - Credentials are stored securely using the system keyring
+## 📝 Usage
 
-3. Add meetings either by:
-   - Importing a calendar file (.ics)
-   - Manually adding meeting details
-   - The application will automatically detect the platform from meeting links
+### Quick Start Guide
 
-4. The application will run in the background and automatically join meetings at the scheduled time
+1. **Launch the application**
+   - Windows: Run the executable or `python main.py`
+   - Linux/macOS: Run `python main.py`
 
-## Security
+2. **Configure your meeting platforms**
+   - Navigate to the Settings tab
+   - Enter your credentials for each service you use
+   - All credentials are securely stored in your system's keyring
 
-- Credentials are stored securely using the system's keyring
-- No sensitive information is stored in plain text
-- All data is stored locally on your machine
+3. **Add meetings**
+   - Import calendar files (.ics)
+   - Or manually add meeting details
+   - Meeting platform is automatically detected from links
 
-## Requirements
+4. **Let it run**
+   - The app minimizes to your system tray
+   - Meetings are automatically joined at the scheduled time
+   - Get notifications before each meeting
 
-If building from source or running manually:
-- Python 3.8 or higher
-- Chrome/Chromium browser
-- System requirements for video conferencing:
-  - Webcam (optional)
-  - Microphone
-  - Stable internet connection
+## 🔒 Security
 
-If using the executable:
-- Chrome/Chromium browser
-- Webcam (optional)
-- Microphone
-- Stable internet connection
+- **Zero plain text storage** - All credentials are secured using your system's keyring
+- **Local-only data** - No data is sent to remote servers
+- **Privacy focused** - Only accesses what's needed to join your meetings
 
-## Troubleshooting
+## ❓ FAQ
 
-1. If the installation fails:
-   - Make sure Python 3.8 or higher is installed
-   - Check your internet connection
-   - Run the installer as administrator
-   - Look for error messages in the console
+<details>
+<summary><b>How does the automatic meeting joining work?</b></summary>
+The application uses browser automation to open meeting links and join the meeting rooms at the scheduled time, handling authentication and join steps automatically.
+</details>
 
-2. If the application fails to join meetings:
-   - Check your internet connection
-   - Verify your credentials are correct
-   - Ensure Chrome/Chromium is installed
-   - Check if the meeting link/ID is valid
+<details>
+<summary><b>Is my data sent anywhere?</b></summary>
+No. All your meeting data and credentials are stored locally on your machine. Credentials are encrypted using your system's keyring service.
+</details>
 
-3. If the application doesn't start:
-   - Verify Chrome/Chromium is installed
-   - Check for any antivirus blocking
-   - Try running as administrator
-   - Check the logs in the application directory
+<details>
+<summary><b>Troubleshooting Installation Issues</b></summary>
 
-## Contributing
+- Ensure Python 3.8+ is installed and in your PATH
+- Verify your internet connection
+- Try running the installer as administrator
+- Check console output for specific error messages
+</details>
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+<details>
+<summary><b>Troubleshooting Meeting Join Issues</b></summary>
 
-## License
+- Verify your internet connection
+- Check that your credentials are correct
+- Ensure Chrome/Chromium is installed and updated
+- Verify the meeting link/ID format is valid
+</details>
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+<details>
+<summary><b>Application Won't Start</b></summary>
+
+- Verify Chrome/Chromium is installed
+- Check for antivirus software blocking the application
+- Try running as administrator
+- Check log files in the application directory
+</details>
+
+## 🤝 Contributing
+
+Contributions are welcome and appreciated! Here's how you can help:
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ by open source contributors</sub>
+</div> 
