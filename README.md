@@ -8,7 +8,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 ![PyQt](https://img.shields.io/badge/UI-PyQt6-41CD52)
-<!-- ![Status](https://img.shields.io/badge/status-active-brightgreen) --> </br>
+<!-- ![Status](https://img.shields.io/badge/status-active-brightgreen) --> </b>
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Code Size](https://img.shields.io/github/languages/code-size/aka-0x4C3DD/meetingAutomation.svg)]()
 [![Last Commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/meetingAutomation.svg)]()
@@ -37,7 +37,7 @@
       ✅ <b>Standalone executables</b> available for both Windows and Linux</br>
       ✅ <b>Smart meeting detection</b> from URLs & calendar data</br>
 
-<!--<table>
+<!-- <table>
   <tr>
     <td width = "50%">
       ✅ <b>Automatic meeting joining</b> for Zoom, Google Meet, and Microsoft Teams</br>
