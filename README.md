@@ -8,7 +8,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 ![PyQt](https://img.shields.io/badge/UI-PyQt6-41CD52)
-![Status](https://img.shields.io/badge/status-active-brightgreen)
+<!-- ![Status](https://img.shields.io/badge/status-active-brightgreen) --> </b>
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Code Size](https://img.shields.io/github/languages/code-size/aka-0x4C3DD/meetingAutomation.svg)]()
 [![Last Commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/meetingAutomation.svg)]()
@@ -31,20 +31,16 @@
 <table>
   <tr>
     <td>
-      <ul>
-        <li>✅ <b>Automatic meeting joining</b> for Zoom, Google Meet, and Microsoft Teams</li>
-        <li>✅ <b>Calendar import support</b> (.ics files)</li>
-        <li>✅ <b>Sleek dark mode UI</b> built with PyQt6</li>
-        <li>✅ <b>System tray integration</b> - runs quietly in the background</li>
-      </ul>
+      ✅ <b>Automatic meeting joining</b> for Zoom, Google Meet, and Microsoft Teams</br>
+      ✅ <b>Calendar import support</b> (.ics files)</br>
+      ✅ <b>Sleek dark mode UI</b> built with PyQt6</br>
+      ✅ <b>System tray integration</b> - runs quietly in the background</br>
     </td>
     <td>
-      <ul>
-        <li>✅ <b>Secure credential storage</b> using system keyring</li>
-        <li>✅ <b>Cross-platform compatibility</b> (Windows & Linux)</li>
-        <li>✅ <b>Standalone executable</b> available for Windows</li>
-        <li>✅ <b>Smart meeting detection</b> from URLs & calendar data</li>
-      </ul>
+      ✅ <b>Secure credential storage</b> using system keyring</br>
+      ✅ <b>Cross-platform compatibility</b> (Windows & Linux)</br>
+      ✅ <b>Standalone executable</b> available for Windows</br>
+      ✅ <b>Smart meeting detection</b> from URLs & calendar data</br>
     </td>
   </tr>
 </table>
@@ -126,8 +122,8 @@ python main.py
         <li>Python 3.8 or higher</li>
         <li>Chrome/Chromium browser</li>
         <li>PyQt6</li>
-        <li>Webcam (optional)</li>
-        <li>Microphone</li>
+        <!-- <li>Webcam (optional)</li>
+        <li>Microphone</li> -->
         <li>Internet connection</li>
       </ul>
     </td>
