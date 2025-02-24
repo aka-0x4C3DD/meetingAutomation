@@ -1,12 +1,18 @@
-# <img src="https://img.shields.io/badge/Meeting-Automator-1abc9c?style=for-the-badge&logo=zoom&logoColor=white" alt="Meeting Automator" height="40"> 
+<!-- # <img src="https://img.shields.io/badge/Meeting-Automator-1abc9c?style=for-the-badge&logo=zoom&logoColor=white" alt="Meeting Automator" height="40"> -->
 
 <div align="center">
 
+# Meeting Automator
+
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 ![PyQt](https://img.shields.io/badge/UI-PyQt6-41CD52)
 ![Status](https://img.shields.io/badge/status-active-brightgreen)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
+[![Code Size](https://img.shields.io/github/languages/code-size/aka-0x4C3DD/meetingAutomation.svg)]()
+[![Last Commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/meetingAutomation.svg)]()
+[![Issues](https://img.shields.io/github/issues/aka-0x4C3DD/meetingAutomation.svg)]()
 
 **Never miss a meeting again! Automatically join your scheduled video calls with ease.**
 
