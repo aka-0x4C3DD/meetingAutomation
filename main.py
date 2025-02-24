@@ -1,18 +1,21 @@
 import sys
-from PyQt6.QtWidgets import (QApplication, QMainWindow, QWidget, QVBoxLayout,
-                           QTabWidget, QPushButton, QLabel, QSystemTrayIcon,
-                           QFileDialog, QFormLayout, QLineEdit, QMessageBox,
-                           QTableWidget, QTableWidgetItem, QHeaderView,
-                           QDateTimeEdit, QSpinBox, QButtonGroup, QRadioButton,
-                           QComboBox, QGroupBox, QFrame, QHBoxLayout)
-from PyQt6.QtCore import Qt, QTimer, QDateTime
-from PyQt6.QtGui import QPalette, QColor, QIcon
+import os
+from PyQt6.QtWidgets import (
+    QApplication, QMainWindow, QTabWidget, QWidget, 
+    QVBoxLayout, QHBoxLayout, QLabel, QPushButton, 
+    QLineEdit, QDateTimeEdit, QComboBox, QTableWidget, 
+    QTableWidgetItem, QFileDialog, QSystemTrayIcon, 
+    QMenu, QMessageBox, QCheckBox, QFormLayout, QGroupBox,
+    QRadioButton, QButtonGroup, QHeaderView, QSpinBox
+)
+from PyQt6.QtCore import Qt, QDateTime, QTimer, QSize
+from PyQt6.QtGui import QIcon, QAction, QPalette, QColor
 import darkdetect
-from meeting_manager import MeetingManager, Meeting, PlatformType
-from platform_handlers import get_handler
 import keyring
-import re
+from meeting_manager import MeetingManager, Meeting
+from platform_handlers import PlatformType, get_handler, ZoomHandler, TeamsHandler, GoogleMeetHandler, BrowserType
 import datetime
+import uuid
 
 class MeetingAutomator(QMainWindow):
     def __init__(self):
@@ -405,10 +408,23 @@ class MeetingAutomator(QMainWindow):
             else:
                 platform_text = self.platform_combo.currentText()
             
-            platform = PlatformType(platform_text.lower().replace(" ", "_"))
+            # Convert platform text to enum
+            platform_map = {
+                "Zoom": PlatformType.ZOOM,
+                "Google Meet": PlatformType.GOOGLE_MEET,
+                "Microsoft Teams": PlatformType.TEAMS
+            }
+            
+            platform = platform_map.get(platform_text)
+            if not platform:
+                # Try converting directly (for backwards compatibility)
+                try:
+                    platform = PlatformType(platform_text.lower().replace(" ", "_"))
+                except ValueError:
+                    raise ValueError(f"Unknown platform: {platform_text}")
             
             meeting = Meeting(
-                id=str(hash(f"{self.title_input.text()}{self.datetime_picker.dateTime().toPyDateTime()}")),
+                id=str(uuid.uuid4()),  # Use UUID for unique IDs
                 title=self.title_input.text().strip(),
                 platform=platform,
                 start_time=self.datetime_picker.dateTime().toPyDateTime(),
