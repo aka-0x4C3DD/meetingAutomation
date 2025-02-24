@@ -8,7 +8,7 @@
 ![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux-lightgrey)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/downloads/)
 ![PyQt](https://img.shields.io/badge/UI-PyQt6-41CD52)
-<!-- ![Status](https://img.shields.io/badge/status-active-brightgreen) --> </b>
+<!-- ![Status](https://img.shields.io/badge/status-active-brightgreen) --> </br>
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)]()
 [![Code Size](https://img.shields.io/github/languages/code-size/aka-0x4C3DD/meetingAutomation.svg)]()
 [![Last Commit](https://img.shields.io/github/last-commit/aka-0x4C3DD/meetingAutomation.svg)]()
@@ -34,7 +34,7 @@
       ✅ <b>System tray integration</b> - runs quietly in the background</br>
 ✅ <b>Secure credential storage</b> using system keyring</br>
       ✅ <b>Cross-platform compatibility</b> (Windows & Linux)</br>
-      ✅ <b>Standalone executable</b> available for Windows</br>
+      ✅ <b>Standalone executables</b> available for both Windows and Linux</br>
       ✅ <b>Smart meeting detection</b> from URLs & calendar data</br>
 
 <!--<table>
@@ -61,15 +61,15 @@
 ## 📥 Installation
 
 <details>
-<summary><b>Method 1: Download Executable (Windows) - Recommended ⭐</b></summary>
+<summary><b>Method 1: Download Executable (Windows & Linux) - Recommended ⭐</b></summary>
 
 1. Download the latest release from the [Releases](https://github.com/yourusername/meeting-automator/releases) page
 2. Extract the zip file
-3. Run `MeetingAutomator.exe`
+3. Run `MeetingAutomator.exe` on Windows or `MeetingAutomator` on Linux
 </details>
 
 <details>
-<summary><b>Method 2: Automated Build (Windows)</b></summary>
+<summary><b>Method 2: Automated Build (Windows & Linux)</b></summary>
 
 ```bash
 # 1. Clone the repository
@@ -77,7 +77,8 @@ git clone https://github.com/yourusername/meeting-automator.git
 cd meeting-automator
 
 # 2. Run the installation script
-install.bat
+install.bat  # On Windows
+./install.sh  # On Linux
 ```
 
 The script handles:
@@ -90,7 +91,7 @@ The final executable will be placed in the `dist` folder.
 </details>
 
 <details>
-<summary><b>Method 3: Manual Installation (Linux/macOS)</b></summary>
+<summary><b>Method 3: Manual Installation (All Platforms)</b></summary>
 
 ```bash
 # 1. Clone the repository
@@ -100,6 +101,7 @@ cd meeting-automator
 # 2. Create and activate virtual environment
 python -m venv venv
 source venv/bin/activate  # On Linux/macOS
+venv\Scripts\activate     # On Windows
 
 # 3. Install dependencies
 pip install -r requirements.txt
@@ -144,8 +146,8 @@ python main.py
 ### Quick Start Guide
 
 1. **Launch the application**
-   - Windows: Run the executable or `python main.py`
-   - Linux/macOS: Run `python main.py`
+   - On Windows: Run the executable or `python main.py`
+   - On Linux: Run the executable or `python main.py`
 
 2. **Configure your meeting platforms**
    - Navigate to the Settings tab
@@ -185,7 +187,7 @@ No. All your meeting data and credentials are stored locally on your machine. Cr
 
 - Ensure Python 3.8+ is installed and in your PATH
 - Verify your internet connection
-- Try running the installer as administrator
+- Try running the installer as administrator on Windows or with sudo on Linux
 - Check console output for specific error messages
 </details>
 
@@ -202,8 +204,8 @@ No. All your meeting data and credentials are stored locally on your machine. Cr
 <summary><b>Application Won't Start</b></summary>
 
 - Verify Chrome/Chromium is installed
-- Check for antivirus software blocking the application
-- Try running as administrator
+- Check for antivirus/firewall software blocking the application
+- Try running as administrator on Windows or with elevated privileges on Linux
 - Check log files in the application directory
 </details>
 
