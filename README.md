@@ -30,13 +30,13 @@
 
 <table>
   <tr>
-    <td>
+    <td width = "50%">
       ✅ <b>Automatic meeting joining</b> for Zoom, Google Meet, and Microsoft Teams</br>
       ✅ <b>Calendar import support</b> (.ics files)</br>
       ✅ <b>Sleek dark mode UI</b> built with PyQt6</br>
       ✅ <b>System tray integration</b> - runs quietly in the background</br>
     </td>
-    <td>
+    <td  width = "50%">
       ✅ <b>Secure credential storage</b> using system keyring</br>
       ✅ <b>Cross-platform compatibility</b> (Windows & Linux)</br>
       ✅ <b>Standalone executable</b> available for Windows</br>
